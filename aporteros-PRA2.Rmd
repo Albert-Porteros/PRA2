@@ -235,6 +235,7 @@ summary(model)
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 model <- C50::C5.0(X, y)
 plot(model)
+write.csv(totalData, file = "ResultatPRA2.csv", row.names = FALSE)
 ```
 
 Per tal d'entendre aquest decision tree cal tenir clar que el estat final de 0 vol dir que no sobreviu, mentre que el 1 vol dir que si que sobreviu.Aquest arbre de decisions té una precisió del 83.2%.
@@ -255,5 +256,9 @@ Firma = c("Albert Porteros Villar", "Albert Porteros Villar","Albert Porteros Vi
 laTabla = data.frame (cbind(Contribucions,Firma))
 knitr::kable(laTabla)
 ```
+
+## Link a GitHub
+
+El treball final es pot trobar a https://github.com/Albert-Porteros/PRA2
 
 
